@@ -161,7 +161,7 @@ data:
   hubble-metrics-server: ":{{ cilium_hubble_scrape_port }}"
   hubble-metrics:
 {% for hubble_metrics_cycle in cilium_hubble_metrics %}
-    {{ hubble_metrics_cycle }}
+    - {{ hubble_metrics_cycle }}
 {% endfor %}
 {% endif %}
   hubble-listen-address: ":4244"
